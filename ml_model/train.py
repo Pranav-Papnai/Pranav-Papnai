@@ -6,7 +6,7 @@ import joblib
 import seaborn as sns
 def train_model():
     # Load dataset
-    data =pd.read_csv(r'E:\my_ml_project\ml_model\Mall_Customers.csv')
+    data =pd.read_csv('data\Mall_Customers.csv')
     X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
    
     scaler = StandardScaler()

@@ -1,3 +1,4 @@
+README.md
 setup.py
 ml_model/__init__.py
 ml_model/predict.py

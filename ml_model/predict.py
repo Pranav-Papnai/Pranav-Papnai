@@ -1,8 +1,15 @@
 import joblib
 import numpy as np
+
 def predict(input_features):
-    # Load the trained model
+    # Load the model and the scaler
     model = joblib.load('model.pkl')
-    # Predict and return result
-    prediction = model.predict(np.array([input_features]))
-    return prediction
+    scaler = joblib.load('scaler.pkl')
+    
+    # Scale the input features
+    input_features = np.array(input_features).reshape(1, -1)
+    input_features = scaler.transform(input_features)
+    
+    # Predict the cluster
+    cluster = model.predict(input_features)
+    return cluster[0]

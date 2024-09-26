@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.cluster  import KMeans
 from sklearn.preprocessing import  StandardScaler
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import joblib
-import seaborn as sns
+# import seaborn as sns
 def train_model():
     # Load dataset
     data =pd.read_csv('data\Mall_Customers.csv')
@@ -18,12 +18,12 @@ def train_model():
     clusters = kmeans.labels_
     data['cluster'] = clusters    # Initialize and train the model
 
-    plt.figure(figsize=(10, 7))
-    sns.scatterplot(data=data, x='Annual Income (k$)', y='Spending Score (1-100)', hue='cluster', palette='Paired')
-    plt.title('Customer segments')
-    plt.xlabel('Annual Income (k$)')
-    plt.ylabel('Spending Score (1-100)')
-    plt.show()
+    # plt.figure(figsize=(10, 7))
+    # sns.scatterplot(data=data, x='Annual Income (k$)', y='Spending Score (1-100)', hue='cluster', palette='Paired')
+    # plt.title('Customer segments')
+    # plt.xlabel('Annual Income (k$)')
+    # plt.ylabel('Spending Score (1-100)')
+    # plt.show()
 
     joblib.dump(kmeans, 'model.pkl')
     joblib.dump(scaler, 'scaler.pkl')

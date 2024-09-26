@@ -1,4 +1,5 @@
+seaborn
+matplotlib
 pandas 
 scikit-learn
 joblib
-seaborn

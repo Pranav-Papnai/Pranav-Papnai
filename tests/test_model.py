@@ -9,7 +9,7 @@ def test_train_model():
 def test_predict():
     #test if predictiion is working
    from ml_model.predict import predict
-   sample_input = [15, 39]
+   sample_input = [[15, 39]]
    cluster = predict(sample_input)
    assert cluster ==  4
  

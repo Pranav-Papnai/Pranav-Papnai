@@ -11,5 +11,5 @@ def test_predict():
    from ml_model.predict import predict
    sample_input = [15, 39]
    cluster = predict(sample_input)
-   assert len(cluster) ==  1
+   assert cluster ==  4
  

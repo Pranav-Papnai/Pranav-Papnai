@@ -3,7 +3,7 @@ from sklearn.cluster  import KMeans
 import joblib
 def train_model():
     # Load dataset
-    data =pd.read_csv('data\Mall_Customers.csv')
+    data =pd.read_csv("E:\my_ml_project\data\Mall_Customers.csv")
     X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
    
        # Based on the Elbow Method, let's choose 5 clusters

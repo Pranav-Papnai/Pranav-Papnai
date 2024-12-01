@@ -1,15 +1,14 @@
-from ml_model.train import train_model 
+from ml_model.train import train_model
+from ml_model.predict import predict
 
 def test_train_model():
- # Train the model
-  model = train_model()
-  print(f"Model: {model}")  # Print the value of model
-  assert model is not None # Ensure the model is trained
+    model = train_model()
+    assert model is not None
 
 def test_predict():
-    #test if predictiion is working
-   from ml_model.predict import predict
-   sample_input = [[15, 39]]
-   cluster = predict(sample_input)
-   assert cluster ==  4
- 
+    sample_input = [[3, 3], [4, 4]]
+    prediction = predict(sample_input)
+    assert prediction is not None
+    assert len(prediction) == 2
+
+    

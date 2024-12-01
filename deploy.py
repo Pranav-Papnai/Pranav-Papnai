@@ -5,3 +5,4 @@ def deploy_model():
     print("Model deployed successfully")
 if __name__ == "__main__":
     deploy_model()
+
